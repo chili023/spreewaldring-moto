@@ -1,0 +1,24 @@
+{
+  "_comment": "Alle Koordinaten in EPSG:25833 (UTM 33N, Meter). Quelle: GeoBasis-DE/LGB, dl-de/by-2-0.",
+  "name": "Spreewaldring (lange Runde)",
+  "crop": { "e0": 409480, "e1": 410120, "n0": 5761320, "n1": 5762000 },
+  "dopTiles": ["33409-5761", "33410-5761"],
+  "dgmTiles": ["33409-5761", "33410-5761"],
+  "asphalt": { "maxSaturation": 0.14, "minValue": 70, "maxValue": 185 },
+  "_exclude": "Alles östlich dieser Linie (Straße, Parkplatz, Kartbahn) wird verworfen.",
+  "excludeEastOf": [[409889, 5761976], [409979, 5761664]],
+  "_pitWall": "Boxenmauer an der Start-Ziel-Geraden, trennt Fahrbahn und Boxengasse.",
+  "pitWall": [[409888, 5761877], [409900, 5761846], [409916, 5761814], [409924, 5761794], [409936, 5761768], [409948, 5761742], [409960, 5761720], [409970, 5761700], [409978, 5761684]],
+  "_waypoints": "Reihenfolge der langen Runde im Uhrzeigersinn. Die Linie folgt zwischen den Punkten dem Skelett der Asphaltfläche.",
+  "waypoints": [
+    [409910.2, 5761820.0], [409940.2, 5761749.8], [409964.2, 5761704.2], [409969.0, 5761664.0],
+    [409924.0, 5761634.0], [409780.0, 5761556.0], [409678.0, 5761443.2], [409591.0, 5761580.0],
+    [409708.0, 5761850.0], [409756.0, 5761844.0], [409642.0, 5761664.0], [409678.0, 5761539.2],
+    [409840.0, 5761682.0], [409909.0, 5761691.0], [409903.0, 5761721.0], [409792.0, 5761748.0],
+    [409777.0, 5761700.0], [409732.0, 5761700.0], [409762.0, 5761793.0], [409858.0, 5761808.0],
+    [409840.0, 5761886.0], [409864.0, 5761889.0]
+  ],
+  "_startFinish": "Geschätzt: Querlinie am Ende der Startaufstellung. Vor Ort prüfen.",
+  "startFinish": [409913, 5761803],
+  "refine": { "stepM": 1.0, "smoothSigmaM": 4.0, "iterations": 3, "maxHalfWidthM": 12.0, "sideFactor": 1.3, "iterations_note": "sideFactor: Seite gilt als Einmündung, wenn breiter als 1,3 x halbe Medianbreite" }
+}

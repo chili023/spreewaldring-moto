@@ -1,0 +1,12 @@
+{
+  "name": "@moto/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./track": "./src/track/index.ts",
+    "./physics": "./src/physics/index.ts"
+  },
+  "scripts": { "typecheck": "tsc --noEmit -p ." }
+}

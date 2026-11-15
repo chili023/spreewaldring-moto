@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.vite/
+*.log
+tools/track-pipeline/cache/
+tools/track-pipeline/out/preview.jpg

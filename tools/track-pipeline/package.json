@@ -1,0 +1,13 @@
+{
+  "name": "@moto/track-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "extract": "bash py/download.sh config.json cache && python3 -I py/extract.py config.json cache out/centerline.json out/preview.jpg",
+    "build-track": "tsx src/build-track.ts out/centerline.json ../../apps/client/public/data/track.json ../../docs/strecke-report.md",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": { "@moto/shared": "workspace:*" },
+  "devDependencies": { "tsx": "^4.20.0", "@types/node": "^22.0.0" }
+}

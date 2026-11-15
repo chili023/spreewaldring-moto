@@ -6,7 +6,10 @@
   "exports": {
     ".": "./src/index.ts",
     "./track": "./src/track/index.ts",
-    "./physics": "./src/physics/index.ts"
+    "./physics": "./src/physics/index.ts",
+    "./race": "./src/race/index.ts"
   },
-  "scripts": { "typecheck": "tsc --noEmit -p ." }
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  }
 }

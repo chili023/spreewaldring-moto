@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spreewaldring Moto – Prototyp</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #111; font-family: system-ui, sans-serif; color: #fff; }
+      canvas { display: block; }
+      .hud { position: fixed; pointer-events: none; text-shadow: 0 1px 3px #000c; font-variant-numeric: tabular-nums; }
+      #hud-tl { top: 14px; left: 16px; font-size: 15px; line-height: 1.5; }
+      #hud-tl .big { font-size: 26px; font-weight: 700; }
+      #hud-tr { top: 14px; right: 16px; }
+      #hud-bl { bottom: 18px; left: 16px; }
+      #hud-bc { bottom: 18px; left: 50%; transform: translateX(-50%); text-align: center; }
+      #speed { font-size: 44px; font-weight: 800; }
+      #speed small { font-size: 16px; font-weight: 500; margin-left: 4px; }
+      #gear { font-size: 22px; font-weight: 700; }
+      .bar { width: 260px; height: 10px; background: #fff3; border-radius: 5px; overflow: hidden; margin: 6px auto; }
+      .bar > div { height: 100%; width: 0; background: linear-gradient(90deg, #6cf, #fc3 75%, #f43); }
+      #grip > div { background: linear-gradient(90deg, #4c8, #fc3 80%, #f43); }
+      #lean { font-size: 30px; font-weight: 800; }
+      #lean small { display: block; font-size: 12px; font-weight: 500; opacity: .8; }
+      #delta.good { color: #4f8; } #delta.bad { color: #f66; }
+      #msg { position: fixed; top: 32%; left: 50%; transform: translateX(-50%); font-size: 34px; font-weight: 800; text-shadow: 0 2px 6px #000; pointer-events: none; }
+      #help { position: fixed; bottom: 18px; right: 16px; font-size: 12px; line-height: 1.5; opacity: .85; text-align: right; }
+      #credits { position: fixed; bottom: 2px; left: 50%; transform: translateX(-50%); font-size: 10px; opacity: .6; pointer-events: none; }
+      #minimap { background: #0006; border-radius: 8px; }
+    </style>
+  </head>
+  <body>
+    <div id="hud-tl" class="hud">
+      <div>RUNDE <span id="lap">–</span> &nbsp; SEKTOR <span id="sector">–</span></div>
+      <div class="big" id="cur">0:00.000</div>
+      <div>Letzte <span id="last">–</span> &nbsp; Beste <span id="best">–</span></div>
+      <div>Δ <span id="delta">–</span></div>
+    </div>
+    <div id="hud-tr" class="hud"><canvas id="minimap" width="200" height="210"></canvas></div>
+    <div id="hud-bl" class="hud"><div id="lean">0°<small>Schräglage (max <span id="leanmax">0</span>°)</small></div></div>
+    <div id="hud-bc" class="hud">
+      <div id="speed">0<small>km/h</small></div>
+      <div><span id="gear">N</span> &nbsp; <span id="rpm">0</span> U/min</div>
+      <div class="bar" id="rpmbar"><div></div></div>
+      <div class="bar" id="grip" title="Haftkreis"><div></div></div>
+    </div>
+    <div id="msg" class="hud"></div>
+    <div id="help" class="hud">
+      ↑/W Gas · ↓/S Bremse vorne · Leertaste Bremse hinten · ←/→ A/D Schräglage<br />
+      C Kamera · R Neustart · M Ton · Gamepad: Stick links, RT Gas, LT Bremse
+    </div>
+    <div id="credits">Luftbild: GeoBasis-DE/LGB (dl-de/by-2-0) · Prototyp, nicht offiziell</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

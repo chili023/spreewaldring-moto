@@ -1,0 +1,21 @@
+{
+  "name": "@moto/client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc --noEmit -p . && vite build",
+    "preview": "vite preview --host",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@moto/shared": "workspace:*",
+    "three": "^0.180.0",
+    "lil-gui": "^0.20.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "vite": "^7.1.0"
+  }
+}

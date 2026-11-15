@@ -4,3 +4,4 @@ dist/
 *.log
 tools/track-pipeline/cache/
 tools/track-pipeline/out/preview.jpg
+apps/client/dist/

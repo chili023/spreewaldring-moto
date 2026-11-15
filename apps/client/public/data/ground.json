@@ -1,0 +1,1 @@
+{"crs": "EPSG:25833", "e0": 409480, "e1": 410120, "n0": 5761320, "n1": 5762000, "height": {"file": "ground_height.bin", "format": "uint16 cm \u00fcber hBase, Zeile 0 = Norden", "hBase": 53.0, "step": 2.0, "nx": 321, "ny": 341}, "source": "Luftbild DOP20 und H\u00f6henmodell DGM1: GeoBasis-DE/LGB, dl-de/by-2-0"}

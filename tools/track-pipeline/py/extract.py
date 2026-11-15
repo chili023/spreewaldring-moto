@@ -215,7 +215,10 @@ def sample_dgm(p, cfg, cache: Path):
         fx = (p[:, 0] - x0) / sx
         fy = (p[:, 1] - y0) / sy
         h, w = arr.shape
-        ok = (fx >= 0) & (fy >= 0) & (fx < w - 1) & (fy < h - 1)
+        # bis zu 1 Rasterzelle außerhalb auf den Rand klemmen (Kachelgrenzen)
+        ok = (fx >= -1) & (fy >= -1) & (fx < w) & (fy < h) & np.isnan(out)
+        fx = np.clip(fx, 0, w - 1.0001)
+        fy = np.clip(fy, 0, h - 1.0001)
         ix, iy = np.floor(fx[ok]).astype(int), np.floor(fy[ok]).astype(int)
         tx, ty = fx[ok] - ix, fy[ok] - iy
         v = (
